@@ -132,10 +132,12 @@ where Element : NumpyScalarCompatible {
         // This code avoids constructing and initialize from `UnsafeBufferPointer`
         // because that uses the `init<S : Sequence>(_ elements: S)` initializer,
         // which performs unnecessary copying.
-        let dummyPointer = UnsafeMutablePointer<Element>.allocate(capacity: 1)
         let scalarCount = shape.reduce(1, *)
-        self.init(repeating: dummyPointer.move(), count: scalarCount)
-        dummyPointer.deallocate()
+        if scalarCount == 0 {
+            self = []
+            return
+        }
+        self.init(repeating: ptr[0], count: scalarCount)
         withUnsafeMutableBufferPointer { buffPtr in
             buffPtr.baseAddress!.assign(from: ptr, count: scalarCount)
         }
