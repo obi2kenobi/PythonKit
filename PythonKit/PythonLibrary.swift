@@ -67,7 +67,10 @@ public struct PythonLibrary {
         }
         
         log("Loading symbol '\(name)' from the Python library...")
-        return unsafeBitCast(self.loadSymbol(self.pythonLibraryHandle, name), to: type)
+        guard let raw = self.loadSymbol(self.pythonLibraryHandle, name) else {
+            fatalError("PythonKit: symbol '\(name)' not found in the Python library")
+        }
+        return unsafeBitCast(raw, to: type)
     }
 }
 
