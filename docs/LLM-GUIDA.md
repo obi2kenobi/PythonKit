@@ -38,3 +38,6 @@ Framework Swift per chiamare codice Python a runtime. La libreria Python è cari
 ## Esito verifiche (2026-11-25)
 - `swift build`: esito VERDE (exit 0, ~12 s, solo warning deprecati in NumpyConversion.swift).
 - `swift test`: non verificato in questa sessione.
+
+## Istruzioni d'uso
+Dettagli completi: `docs/ISTRUZIONI.md`.

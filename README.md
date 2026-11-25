@@ -89,3 +89,7 @@ swift test
 ## Note
 
 - Nato come fork del modulo `Python` del progetto sperimentale [Swift for TensorFlow](https://github.com/tensorflow/swift).
+
+## Istruzioni d'uso
+
+Vedi [docs/ISTRUZIONI.md](docs/ISTRUZIONI.md).
