@@ -4,7 +4,7 @@ Framework Swift per interagire con Python: carica la libreria Python a runtime e
 
 ## Requisiti
 
-- **Swift 5** o superiore
+- **Swift 5.1** o superiore
 - macOS, Linux o Windows
 
 ## Installazione

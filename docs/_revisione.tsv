@@ -1,0 +1,11 @@
+file	classe	affermazione	atteso	trovato	esito
+README.md	AGGIORNATO	README ha 91 righe	91	91 righe (wc -l)	OK
+README.md	AGGIORNATO	README menziona PYTHON_VERSION	presente	linea 70	OK
+README.md	AGGIORNATO	README menziona PYTHON_LIBRARY	presente	linea 71	OK
+README.md	AGGIORNATO	README menziona PYTHON_LOADER_LOGGING	presente	linea 72	OK
+README.md	AGGIORNATO	README mostra "swift test" come comando test	presente	linea 81	OK
+docs/LLM-GUIDA.md	AGGIORNATO	LLM-GUIDA ha 36 righe	36	36 righe	OK
+docs/LLM-GUIDA.md	AGGIORNATO	LLM-GUIDA cita PythonObject come interfaccia pubblica	presente	PythonKit/Python.swift linea 90, doclinea	OK
+docs/LLM-GUIDA.md	AGGIORNATO	LLM-GUIDA cita useVersion/useLibrary in PythonLibrary.swift	presente	PythonLibrary.swift linee 206/212	OK
+docs/LLM-GUIDA.md	AGGIORNATO	LLM-GUIDA cita entry point Python.import	presente	Python.swift linea 673	OK
+docs/LLM-GUIDA.md	AGGIORNATO	LLM-GUIDA cita errori PythonError	presente	Python.swift linea 210	OK

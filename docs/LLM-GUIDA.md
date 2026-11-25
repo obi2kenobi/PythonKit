@@ -34,3 +34,7 @@ Framework Swift per chiamare codice Python a runtime. La libreria Python è cari
 - Codice Swift in `PythonKit/` (fuori perimetro di un audit docs).
 - `.github/workflows/` (CI) senza mandato.
 - File in `Tests/` senza mandato.
+
+## Esito verifiche (2026-11-25)
+- `swift build`: esito VERDE (exit 0, ~12 s, solo warning deprecati in NumpyConversion.swift).
+- `swift test`: non verificato in questa sessione.
