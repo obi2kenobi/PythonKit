@@ -1447,6 +1447,9 @@ public struct PythonBytes : PythonConvertible, ConvertibleFromPython, Hashable {
         case 0:
             self.pythonObject = pythonObject
         default:
+            // Il fallimento lascia un'eccezione Python attiva: va pulita, altrimenti
+            // la prossima chiamata non correlata la rilancia come errore spurio.
+            PyErr_Clear()
             return nil
         }
     }
