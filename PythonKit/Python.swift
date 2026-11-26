@@ -833,6 +833,12 @@ extension UInt : PythonConvertible, ConvertibleFromPython {
             withError: ~0, by: PyInt_AsUnsignedLongMask) else {
                 return nil
         }
+        // La conversione mascherata accetta in silenzio valori fuori da
+        // [0, UInt.max] (es. -1 diventa UInt.max): qui si rifiutano.
+        guard pythonObject >= PythonObject(0),
+              pythonObject <= PythonObject(UInt.max) else {
+            return nil
+        }
         self = value
     }
     
