@@ -93,3 +93,5 @@ swift test
 ## Istruzioni d'uso
 
 Vedi [docs/ISTRUZIONI.md](docs/ISTRUZIONI.md).
+
+Scheda tecnica: [docs/SCHEDA-TECNICA.md](docs/SCHEDA-TECNICA.md).

@@ -41,3 +41,6 @@ Framework Swift per chiamare codice Python a runtime. La libreria Python è cari
 
 ## Istruzioni d'uso
 Dettagli completi: `docs/ISTRUZIONI.md`.
+
+## Scheda tecnica
+Dettagli tecnici: `docs/SCHEDA-TECNICA.md`.
