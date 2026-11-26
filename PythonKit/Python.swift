@@ -869,7 +869,9 @@ extension Double : PythonConvertible, ConvertibleFromPython {
 extension Int8 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = Int(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = Int8(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -880,7 +882,9 @@ extension Int8 : PythonConvertible, ConvertibleFromPython {
 extension Int16 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = Int(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = Int16(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -891,7 +895,9 @@ extension Int16 : PythonConvertible, ConvertibleFromPython {
 extension Int32 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = Int(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = Int32(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -902,7 +908,9 @@ extension Int32 : PythonConvertible, ConvertibleFromPython {
 extension Int64 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = Int(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = Int64(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -913,7 +921,9 @@ extension Int64 : PythonConvertible, ConvertibleFromPython {
 extension UInt8 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = UInt(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = UInt8(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -924,7 +934,9 @@ extension UInt8 : PythonConvertible, ConvertibleFromPython {
 extension UInt16 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = UInt(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = UInt16(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -935,7 +947,9 @@ extension UInt16 : PythonConvertible, ConvertibleFromPython {
 extension UInt32 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = UInt(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = UInt32(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
@@ -946,7 +960,9 @@ extension UInt32 : PythonConvertible, ConvertibleFromPython {
 extension UInt64 : PythonConvertible, ConvertibleFromPython {
     public init?(_ pythonObject: PythonObject) {
         guard let i = UInt(pythonObject) else { return nil }
-        self.init(i)
+        // init(_:) va in trap se i fuori range: si usa init(exactly:).
+        guard let v = UInt64(exactly: i) else { return nil }
+        self = v
     }
     
     public var pythonObject: PythonObject {
